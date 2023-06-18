@@ -1,24 +1,25 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Users Table
 
-Things you may want to cover:
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| id              | bigint | primary key |
+| username        | string | null: false |
+| email           | string | null: false |
+| password_digest | string | null: false |
 
-* Ruby version
+## Portfolios Table
 
-* System dependencies
+| Column      | Type   | Options                        |
+| ----------- | ------ | ------------------------------ |
+| id          | bigint | primary key                    |
+| title       | string | null: false                    |
+| description | text   | null: false                    |
+| url         | string | null: false                    |
+| user_id     | bigint | null: false, foreign_key: true |
 
-* Configuration
+### Association
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Users has_many :portfolios
+- Portfolios belongs_to :user
