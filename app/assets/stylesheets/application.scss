@@ -1,1 +1,19 @@
 @import 'bootstrap/scss/bootstrap';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #333;
+  &:hover {
+    color: #007bff;
+  }
+}

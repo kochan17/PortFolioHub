@@ -1,5 +1,7 @@
-<h1><%= @portfolio.title %></h1>
-
-<p><%= @portfolio.description %></p>
-
-<p><%= link_to 'Visit Portfolio', @portfolio.url %></p>
+<div class="card mb-4 shadow">
+  <div class="card-body">
+    <h1 class="card-title"><%= @portfolio.title %></h1>
+    <p class="card-text"><%= @portfolio.description %></p>
+    <a href="<%= @portfolio.url %>" class="btn btn-primary">Visit Portfolio</a>
+  </div>
+</div>

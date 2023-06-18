@@ -1,9 +1,9 @@
-<h1>Portfolios</h1>
+<h1 class="mb-4">Portfolios</h1>
 
 <div class="row">
   <% @portfolios.each do |portfolio| %>
     <div class="col-md-4">
-      <div class="card mb-4">
+      <div class="card mb-4 shadow">
         <div class="card-body">
           <h2 class="card-title"><%= link_to portfolio.title, portfolio_path(portfolio) %></h2>
           <p class="card-text"><%= portfolio.description %></p>
